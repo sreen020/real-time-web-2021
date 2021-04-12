@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const port = process.env.PORT || 4000;
+
 const http = require("http").createServer(app);
 const path = require("path");
 const io = require("socket.io")(http);
@@ -26,8 +28,7 @@ app.get("/categorie/:categorie", async (req, res) => {
 
   const renderView = "spicificCategorie.ejs";
   const pageTitle = req.params.categorie;
-  const endpoint =
-    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${req.params.categorie}`;
+  const endpoint = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${req.params.categorie}`;
   fetchData(req, res, endpoint, renderView, pageTitle);
 });
 
@@ -36,8 +37,7 @@ app.get("/meal/:id", async (req, res) => {
 
   const renderView = "meal.ejs";
   const pageTitle = req.params.categorie;
-  const endpoint =
-    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${req.params.id}`;
+  const endpoint = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${req.params.id}`;
   fetchData(req, res, endpoint, renderView, pageTitle);
 });
 
@@ -53,6 +53,5 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(4000, () => {
-  console.log("listening on port 4000");
-});
+// Start server
+app.listen(port, () => console.log("Listening to port " + port));
