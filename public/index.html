@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Websockets</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script defer src="/socket.io/socket.io.js"></script>
+    <!-- <script src="http://localhost:4000/socket.io/socket.io.js"></script> -->
+    <script defer src="./chat.js"></script>
+  </head>
+  <body>
+    <div id="chat">
+      <div id="chat-window">
+        <div id="output"></div>
+        <div id="feedback"></div>
+      </div>
+
+      <input id="handle" type="text" placeholder="handle" />
+      <input id="message" type="text" placeholder="Message" />
+      <button id="sendBtn">Send</button>
+    </div>
+  </body>
+</html>
