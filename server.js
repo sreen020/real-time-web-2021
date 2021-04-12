@@ -10,15 +10,35 @@ app.use(express.static(path.resolve("public")));
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
+app.get("/chat", (req, res) => {
   res.render("chat.ejs");
 });
 
-app.get("/recipes", async (req, res) => {
-  const data = await fetchData();
-  res.render("recipes.ejs", { data: data });
+app.get("/categorie", async (req, res) => {
+  const renderView = "categorie.ejs";
+  const pageTitle = "Categorie";
+  const endpoint = "https://www.themealdb.com/api/json/v1/1/categories.php";
+  fetchData(req, res, endpoint, renderView, pageTitle);
+});
 
-  console.log(data);
+app.get("/categorie/:categorie", async (req, res) => {
+  console.log(req.params.categorie);
+
+  const renderView = "spicificCategorie.ejs";
+  const pageTitle = req.params.categorie;
+  const endpoint =
+    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${req.params.categorie}`;
+  fetchData(req, res, endpoint, renderView, pageTitle);
+});
+
+app.get("/meal/:id", async (req, res) => {
+  console.log(req.params.id);
+
+  const renderView = "meal.ejs";
+  const pageTitle = req.params.categorie;
+  const endpoint =
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${req.params.id}`;
+  fetchData(req, res, endpoint, renderView, pageTitle);
 });
 
 io.on("connection", (socket) => {

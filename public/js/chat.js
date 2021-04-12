@@ -6,13 +6,15 @@ const button = document.getElementById("sendBtn");
 const output = document.getElementById("output");
 const feedback = document.getElementById("feedback");
 
-button.addEventListener("click", () => {
-  socket.emit("chatMessage", {
-    message: message.value,
-    handle: handle.value,
+if (button) {
+  button.addEventListener("click", () => {
+    socket.emit("chatMessage", {
+      message: message.value,
+      handle: handle.value,
+    });
+    message.value = "";
   });
-  message.value = "";
-});
+}
 
 socket.on("chatMessage", (data) => {
   feedback.innerHTML = "";
@@ -20,9 +22,11 @@ socket.on("chatMessage", (data) => {
     "<p><strong>" + data.handle + ": </strong>" + data.message + "</p>";
 });
 
-message.addEventListener("keypress", () => {
-  socket.emit("typing", handle.value);
-});
+if (message) {
+  message.addEventListener("keypress", () => {
+    socket.emit("typing", handle.value);
+  });
+}
 
 socket.on("typing", (data) => {
   feedback.innerHTML = "<p><em>" + data + ": is typing a message </em></p>";

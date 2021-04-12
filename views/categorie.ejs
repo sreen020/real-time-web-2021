@@ -1,0 +1,16 @@
+<%- include('./partials/head'); %>
+
+<main>
+  <h1>Categories</h1>
+  <p class="subheader">Choose your favorite categorie</p>
+
+  <section class="categorie-container">
+    <% data.categories.forEach(function(categorie) { %>
+    <a class="categorie-button" href="/categorie/<%- categorie.strCategory %>"
+      ><%- categorie.strCategory %></a
+    >
+    <% }) %>
+  </section>
+</main>
+
+<%- include('./partials/footer'); %>

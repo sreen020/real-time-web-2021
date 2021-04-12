@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #232228;
+  color: #fcfcfc;
+  min-height: 100vh;
+}
+
+main {
+  background-color: #232228;
+  padding: 2rem 1rem;
+  padding-bottom: 5.7rem;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  border-top: 1px solid #404040;
+  background-color: #232228;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 1.3rem 3rem;
+}
+
+footer ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fcfcfc;
+}
+footer a:hover,
+footer a:focus {
+  color: #efb321;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+.subheader {
+  font-size: 0.8rem;
+  color: gray;
+  padding-bottom: 1.2rem;
+}
+
+/* ------- CATEGORIE PAGE -------- */
+
+.categorie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.categorie-button {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  background-color: #3a3a3c;
+  color: #fcfcfc;
+  text-decoration: none;
+  padding: 1.5rem;
+  border-radius: 1.4rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: 2px solid #3a3a3c;
+}
+
+.categorie-button:hover,
+.categorie-button:focus,
+.meal-button:hover,
+.meal-button:focus {
+  border: 2px solid #efb321;
+}
+
+/* -------- SPICIFIC MEAL PAGE -------- */
+.meal-button {
+  position: relative;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a3a3c;
+  color: #fcfcfc;
+  text-decoration: none;
+  padding: 1.5rem;
+  border-radius: 1.4rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: 2px solid #3a3a3c;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.spicific-categorie {
+  padding-top: 3rem;
+}
+
+.meal-button p {
+  padding-top: 1.8rem;
+  padding-bottom: 1rem;
+}
+.meal-tumb {
+  width: 8rem;
+  border-radius: 50%;
+  margin-top: -5.1rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
