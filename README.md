@@ -1,5 +1,7 @@
 # What's for dinner? 
-livelink 
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/screenshot.png" width="300">
+
+livelink:https://whats-for-dinner-rtw.herokuapp.com/categorie
 
 ## Course
 The course Real-Time Web is about learning how to build a real-time application. Real-Time Web is part of the half year minor programme about Web Design and Development in Amsterdam. Bachelor Communication and Multimedia Design, Amsterdam University of Applied Science.
@@ -61,8 +63,9 @@ Dit concept wil ik zeker nog een keer uitwerken in de toekomst!
 
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/IMG_0172.jpg" width="800">
 <br><br><br>
-## Chosen concept
-screenshot
+
+## data lifecycle diagram
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/data-lifecycle-diagram.png" width="800">
 
 ## installation
 
