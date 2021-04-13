@@ -19,6 +19,7 @@ Features
 Het lijkt mij erg leuk om een roulette spel te maken met gebruik van websockets. Uiteindelijk heb ik dit concept niet gekozen. Het werd mij aangeraden om een externe API te gebruiken, deze zal ik niet nodig hebben tijdens het maken van deze roulette tafel.
 
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/IMG_0171.jpg" width="800">
+<br><br><br>
 
 **Concept 2 - What’s for dinner?**<br>
 Wat gaan we vanavond en morgenavond eten? Hebben we nog eieren thuis? Komen deze vragen jouw bekend voor, dan is deze app wellicht iets voor jouw. 
@@ -42,7 +43,7 @@ Features
 - Push notificaties wanneer je een bericht ontvangt
 
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/IMG_0173.jpg" width="800">
-
+<br><br><br>
 
 **Concept 3 - Social media** <br>
 In eerste instantie wilde ik dit concept graag uitwerken omdat het me erg vet lijkt om aan een social media app te werken. Uiteindelijk heb ik hier niet voor gekozen omdat ik hoorde dat veel klasgenoten dit ook gingen doen. 
@@ -59,7 +60,7 @@ Wanneer ik een social media app ga maken moeten er een aantal functionaliteiten 
 Dit concept wil ik zeker nog een keer uitwerken in de toekomst!
 
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/IMG_0172.jpg" width="800">
-
+<br><br><br>
 ## Chosen concept
 screenshot
 
