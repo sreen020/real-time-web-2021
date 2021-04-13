@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io.connect("http://localhost:4000");
 
 const message = document.getElementById("message");
 const handle = document.getElementById("handle");

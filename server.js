@@ -54,4 +54,4 @@ io.on("connection", (socket) => {
 });
 
 // Start server
-app.listen(port, () => console.log("Listening to port " + port));
+http.listen(port, () => console.log("Listening to port " + port));
