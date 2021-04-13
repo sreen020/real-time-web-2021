@@ -1,6 +1,11 @@
+<%- include('./partials/head'); %>
+<main>
+  <h1><%- data.meals[0].strMeal %></h1>
+  <p class="subheader">Choose a recipe</p>
 
-  <%- include('./partials/head'); %>
-
-    <h1><%- data.meals[0].strMeal %></h1>
-
-  <%- include('./partials/footer'); %>
+  <section class="meal-container">
+    <h3><%- data.meals[0].strArea %></h3>
+    <img src="<%- data.meals[0].strMealThumb %>" />
+  </section>
+</main>
+<%- include('./partials/footer'); %>
