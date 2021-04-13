@@ -90,6 +90,3 @@ Dit concept wil ik zeker nog een keer uitwerken in de toekomst!
 ## data lifecycle diagram
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/data-lifecycle-diagram.png" width="800">
 
-## installation
-
-## (Folder structure)
