@@ -1,15 +1,16 @@
 <%- include('./partials/head'); %>
 
-    <div id="chat">
-      <div id="chat-window">
-        <div id="output"></div>
-        <div id="feedback"></div>
-      </div>
-
-      <input id="handle" type="text" placeholder="handle" />
-      <input id="message" type="text" placeholder="Message" />
-      <button id="sendBtn">Send</button>
-    </div>
+<div id="chat">
+  <input id="handle" type="text" required placeholder="Type hier jouw naam" />
+  <p id="error-msg"></p>
+  <div id="chat-window">
+    <div id="output"></div>
+    <div id="feedback"></div>
+  </div>
+  <form>
+    <input id="message" type="text" placeholder="Type iets..." />
+    <button id="sendBtn">Verstuur</button>
+  </form>
+</div>
 
 <%- include('./partials/footer'); %>
-

@@ -1,13 +1,102 @@
 <%- include('./partials/head'); %>
 <main>
   <h1><%- data.meals[0].strMeal %></h1>
-  <p class="subheader">Choose a recipe</p>
+  <h3><%- data.meals[0].strArea %></h3>
 
   <section class="meal-container">
-    <h3><%- data.meals[0].strArea %></h3>
     <img src="<%- data.meals[0].strMealThumb %>" />
 
-    <ul></ul>
+    <h4>Ingredients</h4>
+    <ul>
+      <% if(data.meals[0].strIngredient1) { %>
+      <li>
+        <%- data.meals[0].strMeasure1 %> <%- data.meals[0].strIngredient1 %>
+      </li>
+      <% }%>
+
+      <!-- test -->
+
+      <% if(data.meals[0].strIngredient2) { %>
+      <li>
+        <%- data.meals[0].strMeasure2 %> <%- data.meals[0].strIngredient2 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient3) { %>
+      <li>
+        <%- data.meals[0].strMeasure3 %> <%- data.meals[0].strIngredient3 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient4) { %>
+      <li>
+        <%- data.meals[0].strMeasure4 %> <%- data.meals[0].strIngredient4 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient5) { %>
+      <li>
+        <%- data.meals[0].strMeasure5 %> <%- data.meals[0].strIngredient5 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient6) { %>
+      <li>
+        <%- data.meals[0].strMeasure6 %> <%- data.meals[0].strIngredient6 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient7) { %>
+      <li>
+        <%- data.meals[0].strMeasure7 %> <%- data.meals[0].strIngredient7 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient8) { %>
+      <li>
+        <%- data.meals[0].strMeasure8 %> <%- data.meals[0].strIngredient8 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient9) { %>
+      <li>
+        <%- data.meals[0].strMeasure9 %> <%- data.meals[0].strIngredient9 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient10) { %>
+      <li>
+        <%- data.meals[0].strMeasure10 %> <%- data.meals[0].strIngredient10 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient11) { %>
+      <li>
+        <%- data.meals[0].strMeasure11 %> <%- data.meals[0].strIngredient11 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient12) { %>
+      <li>
+        <%- data.meals[0].strMeasure12 %> <%- data.meals[0].strIngredient12 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient13) { %>
+      <li>
+        <%- data.meals[0].strMeasure13 %> <%- data.meals[0].strIngredient13 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient14) { %>
+      <li>
+        <%- data.meals[0].strMeasure14 %> <%- data.meals[0].strIngredient14 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient15) { %>
+      <li>
+        <%- data.meals[0].strMeasure15 %> <%- data.meals[0].strIngredient15 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient16) { %>
+      <li>
+        <%- data.meals[0].strMeasure16 %> <%- data.meals[0].strIngredient16 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient17) { %>
+      <li>
+        <%- data.meals[0].strMeasure17 %> <%- data.meals[0].strIngredient17 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient18) { %>
+      <li>
+        <%- data.meals[0].strMeasure18 %> <%- data.meals[0].strIngredient18 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient19) { %>
+      <li>
+        <%- data.meals[0].strMeasure19 %> <%- data.meals[0].strIngredient19 %>
+      </li>
+      <% }%> <% if(data.meals[0].strIngredient20) { %>
+      <li>
+        <%- data.meals[0].strMeasure20 %> <%- data.meals[0].strIngredient20 %>
+      </li>
+      <% }%>
+    </ul>
+
+    <h4>Instruction</h4>
+    <p><%- data.meals[0].strInstructions %></p>
   </section>
 </main>
 <%- include('./partials/footer'); %>

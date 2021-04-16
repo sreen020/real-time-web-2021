@@ -126,4 +126,25 @@ footer li {
 .meal-container img {
   width: 100%;
   border-radius: 2rem;
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.meal-container ul {
+  padding-left: 1rem;
+  list-style-type: circle;
+  padding-bottom: 2.5rem;
+}
+
+.meal-container h4 {
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: #efb321;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding-bottom: 1.2rem;
 }

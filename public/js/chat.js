@@ -5,14 +5,28 @@ const handle = document.getElementById("handle");
 const button = document.getElementById("sendBtn");
 const output = document.getElementById("output");
 const feedback = document.getElementById("feedback");
+const errorElement = document.getElementById("error-msg");
 
 if (button) {
-  button.addEventListener("click", () => {
-    socket.emit("chatMessage", {
-      message: message.value,
-      handle: handle.value,
-    });
-    message.value = "";
+  button.addEventListener("click", (e) => {
+    let messages = [];
+    e.preventDefault();
+
+    if (handle.value.length <= 0) {
+      messages.push("Fill your name");
+    } else {
+      errorElement.innerText = "";
+
+      socket.emit("chatMessage", {
+        message: message.value,
+        handle: handle.value,
+      });
+      message.value = "";
+    }
+
+    if (messages.length > 0) {
+      errorElement.innerText = messages.join(", ");
+    }
   });
 }
 
