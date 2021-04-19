@@ -23,6 +23,10 @@ app.get("/categorie", async (req, res) => {
   fetchData(req, res, endpoint, renderView, pageTitle);
 });
 
+app.get("/shoppingList", async (req, res) => {
+  res.render("shoppingList.ejs");
+});
+
 app.get("/categorie/:categorie", async (req, res) => {
   console.log(req.params.categorie);
 
