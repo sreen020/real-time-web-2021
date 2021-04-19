@@ -1,0 +1,33 @@
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.listItem button {
+  width: 3rem;
+}
+
+.shopping-list-container form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.shopping-list-container button {
+  width: 3rem;
+}
+
+.shopping-list-container form input {
+  width: 15%;
+  transition: 0.3s;
+  border-radius: 50%;
+  width: 3rem;
+}
+
+.shopping-list-container form input:focus,
+.shopping-list-container form input:active {
+  width: 100%;
+  border-radius: 1rem;
+}

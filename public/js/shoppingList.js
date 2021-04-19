@@ -21,7 +21,14 @@ firebase
   .ref("shoppingList")
   .on("child_added", (snapshot) => {
     productList.innerHTML +=
-      "<li id=" + "item-" + snapshot.key + ">" + snapshot.val().item + "</li>";
+      "<li id=" +
+      "item-" +
+      snapshot.key +
+      " class=" +
+      "listItem" +
+      ">" +
+      snapshot.val().item +
+      "</li>";
 
     const itemContainer = document.getElementById("item-" + snapshot.key);
     itemContainer.innerHTML +=

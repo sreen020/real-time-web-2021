@@ -84,7 +84,6 @@ socket.on("typing", (data) => {
 
 function deleteMessage(self) {
   const messageId = self.getAttribute("data-id");
-  console.log(messageId);
 
   firebase.database().ref("message").child(messageId).remove();
 }
@@ -93,9 +92,6 @@ firebase
   .database()
   .ref("message")
   .on("child_removed", (snapshot) => {
-    // const test = document.getElementById("message-" + snapshot.key + " p").innerHTML =
-    //   "this message has been removed";
-
     document.querySelector("#message-" + snapshot.key + " p").innerHTML =
       "this message has been removed";
 
