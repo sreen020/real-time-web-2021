@@ -82,3 +82,17 @@ button {
   width: 100%;
   border-radius: 0 0 2px 2px;
 }
+
+.message-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-container button {
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  padding: 0.8rem;
+  width: unset;
+}
