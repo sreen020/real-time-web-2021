@@ -65,14 +65,14 @@ export default function chat() {
           "message-" + snapshot.key
         );
 
-        const testButton = document.createElement("button");
-        testButton.setAttribute("data-id", snapshot.key);
-        testButton.innerText = "D";
-        testButton.addEventListener("click", () => {
-          deleteMessage(testButton);
+        const deleteButton = document.createElement("button");
+        deleteButton.setAttribute("data-id", snapshot.key);
+        deleteButton.innerText = "D";
+        deleteButton.addEventListener("click", () => {
+          deleteMessage(deleteButton);
         });
 
-        messageContainer.appendChild(testButton);
+        messageContainer.appendChild(deleteButton);
       }
     });
 
@@ -87,7 +87,6 @@ export default function chat() {
   });
 
   function deleteMessage(self) {
-    console.log(self);
     const messageId = self.getAttribute("data-id");
 
     firebase.database().ref("message").child(messageId).remove();

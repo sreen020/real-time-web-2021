@@ -28,12 +28,15 @@ export default function shoppingList() {
         "</li>";
 
       const itemContainer = document.getElementById("item-" + snapshot.key);
-      itemContainer.innerHTML +=
-        "<button data-Item=" +
-        snapshot.key +
-        " onclick=" +
-        "deleteitem(this)" +
-        ">D</button>";
+
+      const deleteButton = document.createElement("button");
+      deleteButton.setAttribute("data-Item", snapshot.key);
+      deleteButton.innerText = "D";
+      deleteButton.addEventListener("click", () => {
+        deleteitem(deleteButton);
+      });
+
+      itemContainer.appendChild(deleteButton);
     });
 
   function deleteitem(self) {
