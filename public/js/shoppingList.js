@@ -32,18 +32,10 @@ export default function shoppingList() {
       const deleteButton = document.createElement("button");
       deleteButton.setAttribute("data-Item", snapshot.key);
       deleteButton.innerText = "D";
-      deleteButton.addEventListener("click", () => {
-        deleteitem(deleteButton);
-      });
+      deleteButton.classList.add("delete-button");
 
       itemContainer.appendChild(deleteButton);
     });
-
-  function deleteitem(self) {
-    const itemId = self.getAttribute("data-Item");
-
-    firebase.database().ref("shoppingList").child(itemId).remove();
-  }
 
   firebase
     .database()
@@ -52,4 +44,21 @@ export default function shoppingList() {
       const button = document.querySelector("#item-" + snapshot.key);
       button.parentNode.removeChild(button);
     });
+
+  function removeElements() {
+    const container = document.getElementById("productList");
+    container.onclick = (event) => {
+      if (event.target && event.target.classList.contains("delete-button")) {
+        deleteItem(event.target);
+      }
+    };
+  }
+
+  removeElements();
+
+  function deleteItem(self) {
+    const itemId = self.getAttribute("data-Item");
+
+    firebase.database().ref("shoppingList").child(itemId).remove();
+  }
 }

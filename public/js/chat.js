@@ -68,9 +68,7 @@ export default function chat() {
         const deleteButton = document.createElement("button");
         deleteButton.setAttribute("data-id", snapshot.key);
         deleteButton.innerText = "D";
-        deleteButton.addEventListener("click", () => {
-          deleteMessage(deleteButton);
-        });
+        deleteButton.classList.add("delete-button");
 
         messageContainer.appendChild(deleteButton);
       }
@@ -85,6 +83,17 @@ export default function chat() {
   socket.on("typing", (data) => {
     feedback.innerHTML = "<p><em>" + data + ": is typing a message </em></p>";
   });
+
+  function removeElements() {
+    const container = document.getElementById("output");
+    container.onclick = (event) => {
+      if (event.target && event.target.classList.contains("delete-button")) {
+        deleteMessage(event.target);
+      }
+    };
+  }
+
+  removeElements();
 
   function deleteMessage(self) {
     const messageId = self.getAttribute("data-id");
