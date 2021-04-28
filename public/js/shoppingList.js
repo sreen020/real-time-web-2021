@@ -6,11 +6,15 @@ export default function shoppingList() {
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    firebase.database().ref("shoppingList").push().set({
-      item: addItemInput.value,
-    });
+    if (addItemInput.value.length > 0) {
+      firebase.database().ref("shoppingList").push().set({
+        item: addItemInput.value,
+      });
 
-    addItemInput.value = "";
+      addItemInput.value = "";
+    } else {
+      return;
+    }
   });
 
   firebase
@@ -29,9 +33,9 @@ export default function shoppingList() {
 
       const itemContainer = document.getElementById("item-" + snapshot.key);
 
-      const deleteButton = document.createElement("button");
+      const deleteButton = document.createElement("img");
       deleteButton.setAttribute("data-Item", snapshot.key);
-      deleteButton.innerText = "D";
+      deleteButton.src = "./img/delete.svg";
       deleteButton.classList.add("delete-button");
 
       itemContainer.appendChild(deleteButton);

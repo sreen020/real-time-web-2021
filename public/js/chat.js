@@ -18,17 +18,21 @@ export default function chat() {
       } else {
         errorElement.innerText = "";
 
-        socket.emit("chatMessage", {
-          message: message.value,
-          handle: handle.value,
-        });
+        if (message.value.length > 0) {
+          socket.emit("chatMessage", {
+            message: message.value,
+            handle: handle.value,
+          });
 
-        firebase.database().ref("message").push().set({
-          sender: handle.value,
-          message: message.value,
-        });
+          firebase.database().ref("message").push().set({
+            sender: handle.value,
+            message: message.value,
+          });
 
-        message.value = "";
+          message.value = "";
+        } else {
+          return;
+        }
       }
 
       if (messages.length > 0) {
