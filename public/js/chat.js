@@ -1,5 +1,8 @@
 const socket = io.connect();
 
+/**
+ *
+ */
 export default function chat() {
   const message = document.getElementById("message");
   const handle = document.getElementById("handle");
@@ -9,6 +12,7 @@ export default function chat() {
   const errorElement = document.getElementById("error-msg");
 
   if (button) {
+    // if user has not filled in a name, show error message
     button.addEventListener("click", (e) => {
       let messages = [];
       e.preventDefault();
@@ -18,17 +22,20 @@ export default function chat() {
       } else {
         errorElement.innerText = "";
 
+        // The sender and the message will be emitted
         if (message.value.length > 0) {
           socket.emit("chatMessage", {
             message: message.value,
             handle: handle.value,
           });
 
+          // The sender and the message will also be send to the firebase database
           firebase.database().ref("message").push().set({
             sender: handle.value,
             message: message.value,
           });
 
+          // Clear the message field
           message.value = "";
         } else {
           return;
@@ -41,6 +48,8 @@ export default function chat() {
     });
   }
 
+  // When the is a new child in the "message" database, this function will be triggered
+  // This function will add the new message to the client
   firebase
     .database()
     .ref("message")
@@ -58,6 +67,8 @@ export default function chat() {
         snapshot.val().message;
       +"</p></div>";
 
+      // When name of the user from the new message is the same as the user using the chat
+      // there will be a delete button to delete the message
       if (handle.value == snapshot.val().sender) {
         const messageContainer = document.getElementById(
           "message-" + snapshot.key
@@ -72,6 +83,7 @@ export default function chat() {
       }
     });
 
+  // When user is typing there will be a messages displayed to other users
   if (message) {
     message.addEventListener("keypress", () => {
       socket.emit("typing", handle.value);
@@ -82,6 +94,7 @@ export default function chat() {
     feedback.innerHTML = "<p><em>" + data + ": is typing a message </em></p>";
   });
 
+  // this function will trigger the function to remove from database
   function removeElements() {
     const container = document.getElementById("output");
     container.onclick = (event) => {
@@ -93,12 +106,15 @@ export default function chat() {
 
   removeElements();
 
+  // this function will remove the message from the database
   function deleteMessage(self) {
     const messageId = self.getAttribute("data-id");
 
     firebase.database().ref("message").child(messageId).remove();
   }
 
+  // when a child is removed from the database this function wille be called
+  // this function will remove the message on the client
   firebase
     .database()
     .ref("message")

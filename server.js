@@ -12,6 +12,7 @@ app.use(express.static(path.resolve("public")));
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
+// home route will be redirected to /categorie
 app.get("/", (req, res) => {
   res.redirect("/categorie");
 });
@@ -20,6 +21,7 @@ app.get("/chat", (req, res) => {
   res.render("chat.ejs");
 });
 
+// Data will be fetched to show all categories
 app.get("/categorie", async (req, res) => {
   const renderView = "categorie.ejs";
   const pageTitle = "Categorie";
@@ -31,6 +33,7 @@ app.get("/shoppingList", async (req, res) => {
   res.render("shoppingList.ejs");
 });
 
+// Data will be fetched for all meals inside a spicific categorie
 app.get("/categorie/:categorie", async (req, res) => {
   const renderView = "spicificCategorie.ejs";
   const pageTitle = req.params.categorie;
@@ -38,6 +41,7 @@ app.get("/categorie/:categorie", async (req, res) => {
   fetchData(req, res, endpoint, renderView, pageTitle);
 });
 
+// Data will be fetched for spicific meal
 app.get("/meal/:id", async (req, res) => {
   const renderView = "meal.ejs";
   const pageTitle = req.params.categorie;
@@ -45,6 +49,7 @@ app.get("/meal/:id", async (req, res) => {
   fetchData(req, res, endpoint, renderView, pageTitle);
 });
 
+// When user connects to application this function will trigger
 io.on("connection", (socket) => {
   console.log("connected", socket.id);
 
@@ -52,6 +57,7 @@ io.on("connection", (socket) => {
     io.emit("chatMessage", data);
   });
 
+  // broadcast means that it will show for all connected users EXCEPT for the user that triggers it
   socket.on("typing", (data) => {
     socket.broadcast.emit("typing", data);
   });

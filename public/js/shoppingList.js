@@ -1,3 +1,6 @@
+/**
+ *
+ */
 export default function shoppingList() {
   const addItemInput = document.getElementById("addItemInput");
   const submitBtn = document.getElementById("submitBtn");
@@ -6,17 +9,22 @@ export default function shoppingList() {
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
+    // the message will be send to the firebase database
     if (addItemInput.value.length > 0) {
       firebase.database().ref("shoppingList").push().set({
         item: addItemInput.value,
       });
 
+      // Clear the message field
       addItemInput.value = "";
     } else {
       return;
     }
   });
 
+  // When the is a new child in the "shoppingList" database, this function will be triggered
+  // This function will add the new message to the client
+  // There will be a remove button for each item
   firebase
     .database()
     .ref("shoppingList")
@@ -41,6 +49,8 @@ export default function shoppingList() {
       itemContainer.appendChild(deleteButton);
     });
 
+  // When a child in the "shoppingList" database is removed, this function will be triggered
+  // this function will remove the message on the client
   firebase
     .database()
     .ref("shoppingList")
@@ -49,6 +59,7 @@ export default function shoppingList() {
       button.parentNode.removeChild(button);
     });
 
+  // this function will trigger the function to remove from database
   function removeElements() {
     const container = document.getElementById("productList");
     container.onclick = (event) => {
@@ -60,6 +71,7 @@ export default function shoppingList() {
 
   removeElements();
 
+  // this function will remove the message from the database
   function deleteItem(self) {
     const itemId = self.getAttribute("data-Item");
 
