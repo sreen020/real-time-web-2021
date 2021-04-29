@@ -12,6 +12,10 @@ app.use(express.static(path.resolve("public")));
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
+app.get("/", (req, res) => {
+  res.redirect("/categorie");
+});
+
 app.get("/chat", (req, res) => {
   res.render("chat.ejs");
 });
@@ -28,8 +32,6 @@ app.get("/shoppingList", async (req, res) => {
 });
 
 app.get("/categorie/:categorie", async (req, res) => {
-  console.log(req.params.categorie);
-
   const renderView = "spicificCategorie.ejs";
   const pageTitle = req.params.categorie;
   const endpoint = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${req.params.categorie}`;
@@ -37,8 +39,6 @@ app.get("/categorie/:categorie", async (req, res) => {
 });
 
 app.get("/meal/:id", async (req, res) => {
-  console.log(req.params.id);
-
   const renderView = "meal.ejs";
   const pageTitle = req.params.categorie;
   const endpoint = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${req.params.id}`;
