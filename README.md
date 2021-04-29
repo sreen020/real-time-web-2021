@@ -23,6 +23,13 @@ npm run watch
 Type in your browser localhost:4000
 ```
 
+## Packages
+- ejs
+- express
+- node-fetch
+- socket.io
+- nodemon
+
 ## live demo
 https://whats-for-dinner-rtw.herokuapp.com/categorie
 
@@ -89,4 +96,8 @@ Dit concept wil ik zeker nog een keer uitwerken in de toekomst!
 
 ## data lifecycle diagram
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/data-lifecycle-diagram.png" width="800">
+
+## Features
+
+**Recipes**
 
