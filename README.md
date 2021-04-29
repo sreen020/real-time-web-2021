@@ -94,9 +94,6 @@ Dit concept wil ik zeker nog een keer uitwerken in de toekomst!
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/IMG_0172.jpg" width="800">
 <br><br><br>
 
-## data lifecycle diagram
-<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/data-lifecycle-diagram.png" width="800">
-
 ## Features
 
 **Recipes**<br>
@@ -180,3 +177,12 @@ Hier zitten nog een aantal extra functionaliteiten, namelijk het verwijderen van
 - Notifications
 - Translation API
 - Service worker
+
+## Data lifecycle diagram
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/data-lifecycle-diagram.png" width="800">
+
+De data van de chat en het boodschappenlijstje wordt opgeslagen in een database. Hier gebruik ik firebase voor. Voor dit project had ik nog nooit met firebase gewerkt, ik moet zeggen dat ik het erg fijn vindt werken en ik ga het zeker vaker gebuiken!
+
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/database.png" width="800">
+
+
