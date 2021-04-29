@@ -183,6 +183,6 @@ Hier zitten nog een aantal extra functionaliteiten, namelijk het verwijderen van
 
 De data van de chat en het boodschappenlijstje wordt opgeslagen in een database. Hier gebruik ik firebase voor. Voor dit project had ik nog nooit met firebase gewerkt, ik moet zeggen dat ik het erg fijn vindt werken en ik ga het zeker vaker gebuiken!
 
-<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/database.png" width="600">
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/database.png" width="800">
 
 
