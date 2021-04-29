@@ -41,7 +41,7 @@ footer a {
 }
 footer a:hover,
 footer a:focus {
-  color: #efb321;
+  color: #fd5631;
 }
 
 footer li {
@@ -80,7 +80,7 @@ footer li {
 .categorie-button:focus,
 .meal-button:hover,
 .meal-button:focus {
-  border: 2px solid #efb321;
+  border: 2px solid #fd5631;
 }
 
 /* -------- SPICIFIC MEAL PAGE -------- */
@@ -142,7 +142,7 @@ footer li {
 }
 
 h3 {
-  color: #efb321;
+  color: #fd5631;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.9rem;

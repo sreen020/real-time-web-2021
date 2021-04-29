@@ -41,12 +41,6 @@ export default function chat() {
     });
   }
 
-  // socket.on("chatMessage", (data) => {
-  //   feedback.innerHTML = "";
-  //   output.innerHTML +=
-  //     "<p><strong>" + data.handle + ": </strong>" + data.message + "</p>";
-  // });
-
   firebase
     .database()
     .ref("message")
@@ -69,9 +63,9 @@ export default function chat() {
           "message-" + snapshot.key
         );
 
-        const deleteButton = document.createElement("button");
+        const deleteButton = document.createElement("img");
         deleteButton.setAttribute("data-id", snapshot.key);
-        deleteButton.innerText = "D";
+        deleteButton.src = "./img/delete.svg";
         deleteButton.classList.add("delete-button");
 
         messageContainer.appendChild(deleteButton);
