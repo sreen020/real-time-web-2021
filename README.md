@@ -173,11 +173,6 @@ Wanneer je dan in de supermarkt staat en je een vraag heb over een bepaald produ
 Hier zitten nog een aantal extra functionaliteiten, namelijk het verwijderen van jouw berichten en kunnen zien wie er aan het typen is.
 
 
-**Future TODO list**
-- Notifications
-- Translation API
-- Service worker
-
 ## Data lifecycle diagram
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/data-lifecycle-diagram.png" width="800">
 
@@ -186,3 +181,8 @@ De data van de chat en het boodschappenlijstje wordt opgeslagen in een database.
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/database.png" width="800">
 
 
+**Future TODO list**
+- Notifications
+- Translation API
+- Service worker
+- letterlijk "whats for dinner?" per dag (soort rooms)
