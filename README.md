@@ -99,12 +99,16 @@ Dit concept wil ik zeker nog een keer uitwerken in de toekomst!
 
 ## Features
 
-**Recipes**
+**Recipes**<br>
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/screenshot.png" width="300">
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/screen-1.png" width="300">
+
+
 Op deze pagina kan je een groot assortiment recepten verkrijgen. Alle recepten zijn gecategoriseerd en onderverdeeld in verschillende pagina's. Deze recepten komen uit de "Free meal API". 
 
 De data van deze API wordt ingedeeld in kleine requests. Zo heb ik vor elke pagina een nieuwe API call moeten doen. Zo ziet de data van de API eruit: 
 
-**All categories**
+**All categories**<br>
 ```
     {
       "idCategory": "4",
@@ -120,7 +124,7 @@ De data van deze API wordt ingedeeld in kleine requests. Zo heb ik vor elke pagi
     }
 ```
 
-**Spicific categorie**
+**Spicific categorie**<br>
 ```
     {
       "strMeal": "Baked salmon with fennel & tomatoes",
@@ -134,7 +138,7 @@ De data van deze API wordt ingedeeld in kleine requests. Zo heb ik vor elke pagi
     }
 ```
 
-**Spicific meal**
+**Spicific meal**<br>
 ```
       "idMeal": "52993",
       "strMeal": "Honey Balsamic Chicken with Crispy Broccoli & Potatoes",
@@ -155,5 +159,24 @@ De data van deze API wordt ingedeeld in kleine requests. Zo heb ik vor elke pagi
       "strIngredient10": "Olive Oil",
 ```
 
-<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/screenshot.png" width="300">
 
+**Shopping list**<br>
+
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/screen-2.png" width="300">
+
+Wanneer we het over een boodschappen app hebben, kan een boodschappenlijstje natuurlijk niet missen. Dit boodschappenlijstje is een real-time functionaliteit. Je werkt hier zonder rooms, accounts of andere authenticatie. De reden hiervan is omdat ik deze app daad werkelijk in mijn eigen huidhouden wil gaan gebruiken. Mijn ouders en mijn zus zitten niet echt te wachten op bepaalde rooms joinen of accounts aan te maken. Ze willen de applicatie openen en gelijk van start gaan.
+
+
+
+**Chat**<br>
+
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/screen-3.png" width="300">
+
+Wanneer je dan in de supermarkt staat en je een vraag heb over een bepaald product kan je gebruik maken van de handige chat functionaliteit. Net als het boodschappenlijstje is ook deze chat real-time. In plaats van inloggen leek mij het handig om 2 invoervelden te tonen. De eerste is voor jouw naam, dit is de naam die op het scherm getoond wordt wanneer jij een bericht verstuurd. De tweede is een invoerveld voor jouw bericht. 
+Hier zitten nog een aantal extra functionaliteiten, namelijk het verwijderen van jouw berichten en kunnen zien wie er aan het typen is.
+
+
+**Future TODO list**
+- Notifications
+- Translation API
+- Service worker
