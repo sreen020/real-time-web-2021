@@ -23,6 +23,13 @@ npm run watch
 Type in your browser localhost:4000
 ```
 
+## Packages
+- ejs
+- express
+- node-fetch
+- socket.io
+- nodemon
+
 ## live demo
 https://whats-for-dinner-rtw.herokuapp.com/categorie
 
@@ -89,4 +96,64 @@ Dit concept wil ik zeker nog een keer uitwerken in de toekomst!
 
 ## data lifecycle diagram
 <img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/data-lifecycle-diagram.png" width="800">
+
+## Features
+
+**Recipes**
+Op deze pagina kan je een groot assortiment recepten verkrijgen. Alle recepten zijn gecategoriseerd en onderverdeeld in verschillende pagina's. Deze recepten komen uit de "Free meal API". 
+
+De data van deze API wordt ingedeeld in kleine requests. Zo heb ik vor elke pagina een nieuwe API call moeten doen. Zo ziet de data van de API eruit: 
+
+**All categories**
+```
+    {
+      "idCategory": "4",
+      "strCategory": "Lamb",
+      "strCategoryThumb": "https:\/\/www.themealdb.com\/images\/category\/lamb.png",
+      "strCategoryDescription": "Lamb, hogget, and mutton are the meat of domestic sheep (species Ovis aries) at different ages.\r\n\r\nA sheep in its first year is called a lamb, and its meat is also called lamb. The meat of a juvenile sheep older than one year is hogget; outside the USA this is also a term for the living animal. The meat of an adult sheep is mutton, a term only used for the meat, not the living animals. The term mutton is almost always used to refer to goat meat in the Indian subcontinent.\r\n\r\n"
+    },
+    {
+      "idCategory": "5",
+      "strCategory": "Miscellaneous",
+      "strCategoryThumb": "https:\/\/www.themealdb.com\/images\/category\/miscellaneous.png",
+      "strCategoryDescription": "General foods that don't fit into another category"
+    }
+```
+
+**Spicific categorie**
+```
+    {
+      "strMeal": "Baked salmon with fennel & tomatoes",
+      "strMealThumb": "https:\/\/www.themealdb.com\/images\/media\/meals\/1548772327.jpg",
+      "idMeal": "52959"
+    },
+    {
+      "strMeal": "Cajun spiced fish tacos",
+      "strMealThumb": "https:\/\/www.themealdb.com\/images\/media\/meals\/uvuyxu1503067369.jpg",
+      "idMeal": "52819"
+    }
+```
+
+**Spicific meal**
+```
+      "idMeal": "52993",
+      "strMeal": "Honey Balsamic Chicken with Crispy Broccoli & Potatoes",
+      "strDrinkAlternate": null,
+      "strCategory": "Chicken",
+      "strArea": "American",
+      "strTags": null,
+      "strYoutube": "",
+      "strIngredient1": "Potatoes",
+      "strIngredient2": "Broccoli",
+      "strIngredient3": "Garlic",
+      "strIngredient4": "Chicken Breast",
+      "strIngredient5": "Balsamic Vinegar",
+      "strIngredient6": "Honey",
+      "strIngredient7": "Chicken Stock",
+      "strIngredient8": "Butter",
+      "strIngredient9": "Vegetable Oil",
+      "strIngredient10": "Olive Oil",
+```
+
+<img src="https://github.com/sreen020/real-time-web-2021/blob/main/public/img/readme-images/screenshot.png" width="300">
 
